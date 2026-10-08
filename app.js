@@ -1,4 +1,3 @@
-// ====== НАСТРОЙКИ ВАШЕГО ПРОЕКТА «ОЧКО» ======
 const firebaseConfig = {
   apiKey: "AIzaSyBp-qAfQp89TQCJXR_vnOlZ3LrTaOQfurM",
   authDomain: "://firebaseapp.com",
@@ -8,16 +7,13 @@ const firebaseConfig = {
   appId: "1:26791758713:web:ba7053922fadc38503bda8"
 };
 
-// Инициализация по новому безопасному методу
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
 
-// Инициализация карты Leaflet
 const map = L.map('map', { zoomControl: false }).setView([55.75, 37.62], 10); 
 L.control.zoom({ position: 'topleft' }).addTo(map);
 
-// Подключаем карту
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
@@ -48,7 +44,7 @@ document.getElementById('marker-form').addEventListener('submit', async (e) => {
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
     const category = document.getElementById('category').value;
-    const photoFile = document.getElementById('photo').files[0]; // Берем первый файл
+    const photoFile = document.getElementById('photo').files[0]; 
     if (!temporaryCoords) return;
 
     const submitBtn = e.target.querySelector('button[type="submit"]');
