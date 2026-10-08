@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Наша Карта</title>
-    <link rel="stylesheet" href="https://unpkg.com" />
+    <link rel="stylesheet" href="leaflet.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <script src="https://gstatic.com"></script>
-    <script src="https://gstatic.com"></script>
-    <script src="https://gstatic.com"></script>
 </head>
 <body>
     <div id="map"></div>
-    <button id="geo-btn" class="main-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
+    <button id="geo-btn" class="main-btn">📍</button>
     <div id="modal" class="modal">
         <div class="modal-content">
-            <h3><i class="fa-solid fa-location-dot"></i> Новая метка</h3>
+            <h3>Новая метка</h3>
             <form id="marker-form">
                 <input type="text" id="author" placeholder="Ваше имя" required>
                 <input type="text" id="title" placeholder="Название места" required>
@@ -28,7 +24,7 @@
                     <option value="⚠️ Важное">⚠️ Важное</option>
                 </select>
                 <label class="file-input-label">
-                    <i class="fa-solid fa-camera"></i> Добавить фото
+                    Добавить фото
                     <input type="file" id="photo" accept="image/*">
                 </label>
                 <div id="file-name">Файл не выбран</div>
@@ -39,7 +35,11 @@
             </form>
         </div>
     </div>
-    <script src="https://unpkg.com"></script>
+    
+    <script src="firebase-app-compat.js"></script>
+    <script src="firebase-firestore-compat.js"></script>
+    <script src="firebase-storage-compat.js"></script>
+    <script src="leaflet.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
