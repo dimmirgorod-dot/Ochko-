@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Наша Карта</title>
+    <!-- Подключаем карту Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- ЖЕЛЕЗОБЕТОННОЕ ПОДКЛЮЧЕНИЕ СЕРВЕРА FIREBASE (Без импортов) -->
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <button id="geo-btn" class="main-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fa-solid fa-location-dot"></i> Новая метка</h3>
+            <form id="marker-form">
+                <input type="text" id="author" placeholder="Ваше имя" required>
+                <input type="text" id="title" placeholder="Название места" required>
+                <textarea id="description" placeholder="Описание, заметки..." rows="3"></textarea>
+                <label for="category">Категория:</label>
+                <select id="category">
+                    <option value="🍔 Еда">🍔 Еда</option>
+                    <option value="🌲 Отдых">🌲 Отдых</option>
+                    <option value="⚠️ Важное">⚠️ Важное</option>
+                </select>
+                <label class="file-input-label">
+                    <i class="fa-solid fa-camera"></i> Добавить фото
+                    <input type="file" id="photo" accept="image/*">
+                </label>
+                <div id="file-name">Файл не выбран</div>
+                <div class="modal-buttons">
+                    <button type="button" id="cancel-btn" class="btn btn-secondary">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com"></script>
+    <!-- ОБЫЧНОЕ ПОДКЛЮЧЕНИЕ НАШЕГО ФАЙЛА ЛОГИКИ -->
+    <script src="app.js"></script>
+</body>
+</html>
