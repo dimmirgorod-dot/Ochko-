@@ -90,7 +90,7 @@ db.collection("markers").onSnapshot((snapshot) => {
         if (change.type === "added") {
             const marker = L.marker([data.lat, data.lng]).addTo(map);
             let popupContent = `<div style="font-size:14px; min-width:180px;"><strong>${data.title}</strong> <small>(${data.category})</small><br><p style="margin:5px 0;">${data.description}</p><small style="color:#999;">Автор: ${data.author}</small><br>`;
-            if (data.photoUrl) popupContent += `<img src="${data.photoUrl}" class="popup-img"/>`;
+            if (data.photoUrl) popupContent += `<img src="${data.photoUrl}" class="popup-img" style="width:100%; max-width:250px; border-radius:8px; margin-top:8px; display:block;"/>`;
             popupContent += `<button onclick="window.deleteMarker('${id}', '${data.photoStoragePath}')" style="margin-top:10px; background:#dc3545; color:white; border:none; padding:5px 8px; border-radius:4px; font-size:12px; width:100%; cursor:pointer;">Удалить ошибку</button></div>`;
             marker.bindPopup(popupContent);
             markersOnMap[id] = marker; 
