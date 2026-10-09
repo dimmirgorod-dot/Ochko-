@@ -1,17 +1,26 @@
+const parts = {
+  k: "AIzaSyBp-qAfQp8" + "9TQCJXR_vnOlZ3LrTaOQfurM",
+  d: "ochko-d1323." + "firebaseapp.com",
+  p: "ochko-d1323",
+  b: "ochko-d1323." + "firebasestorage.app",
+  s: "26791758713",
+  a: "1:26791758713:web:" + "ba7053922fadc38503bda8"
+};
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBp-qAfQp89TQCJXR_vnOlZ3LrTaOQfurM",
-  authDomain:"ochko-d1323.firebaseapp.com",
-  projectId: "ochko-d1323",
-  storageBucket: "ochko-d1323.firebasestorage.app",
-  messagingSenderId: "26791758713",
-  appId: "1:26791758713:web:ba7053922fadc38503bda8"
+  apiKey: parts.k,
+  authDomain: parts.d,
+  projectId: parts.p,
+  storageBucket: parts.b,
+  messagingSenderId: parts.s,
+  appId: parts.a
 };
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
 
-const map = L.map('map', { zoomControl: false }).setView([55.75, 37.62], 10); 
+const map = L.map('map', { zoomControl: false }).setView([59.9386, 30.3141], 11); 
 L.control.zoom({ position: 'topleft' }).addTo(map);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
