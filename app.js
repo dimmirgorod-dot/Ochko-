@@ -1,6 +1,6 @@
 const firebaseConfig = {
   apiKey: "AIzaSyBp-qAfQp89TQCJXR_vnOlZ3LrTaOQfurM",
-  authDomain: "://firebaseapp.com",
+  authDomain:"ochko-d1323firebaseapp.com",
   projectId: "ochko-d1323",
   storageBucket: "ochko-d1323.firebasestorage.app",
   messagingSenderId: "26791758713",
